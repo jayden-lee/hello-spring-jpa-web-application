@@ -10,3 +10,9 @@
 * MariaDB or MySQL
 
 ## Getting started
+
+```
+$ git clone https://github.com/jayden-lee/hello-spring-jpa-web-application.git
+$ cd hello-spring-jpa-web-application
+$ ./gradlew bootRun
+```
