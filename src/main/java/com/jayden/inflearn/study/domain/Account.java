@@ -1,9 +1,11 @@
 package com.jayden.inflearn.study.domain;
 
 import lombok.*;
+import org.hibernate.type.descriptor.java.UUIDTypeDescriptor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Getter @Setter @EqualsAndHashCode(of = "id")
@@ -50,4 +52,8 @@ public class Account {
     private boolean studyUpdatedByEmail;
 
     private boolean studyUpdatedByWeb;
+
+    public void generateEmailToken() {
+        this.emailCheckToken = UUID.randomUUID().toString();
+    }
 }

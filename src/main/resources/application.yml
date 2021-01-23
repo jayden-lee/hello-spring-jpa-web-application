@@ -1,5 +1,11 @@
 spring:
+  profiles:
+    active: local
   datasource:
     url: jdbc:mariadb://localhost:3306/testdb
     username: root
     password: admin007!
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
